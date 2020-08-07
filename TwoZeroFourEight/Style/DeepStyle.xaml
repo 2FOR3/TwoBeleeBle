@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:TwoZeroFourEight">
+    <Style BasedOn="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" x:Key="btnStyle" TargetType="Button">
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Background" Value="SkyBlue"/>
+        <Setter Property="FontSize" Value="13"/>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,35 @@
+﻿<Window x:Class="TwoZeroFourEight.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TwoZeroFourEight"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="2048" Icon="Images/2048Style.ico"
+        Height="780" Width="870" MinHeight="300" MinWidth="300"
+        Loaded="Window_Loaded" KeyDown="Window_KeyDown" Closed="Window_Closed">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <local:GameBoard x:Name="gameBoard" Grid.Row="0" Background="#CDC1B3" Margin="5" />
+        
+        <StackPanel x:Name="sp_ActionBar" Grid.Row="0" Grid.Column="1" Orientation="Vertical" Margin="5" Background="LightGray">
+            <Button x:Name="btn_Option" Content="游戏选项" Margin="5" Click="btn_Option_Click" Focusable="False"/>
+            <Button x:Name="btn_NewGame" Content="重新开始" Margin="5" Click="btn_NewGame_Click" Focusable="False"/>
+            <Button x:Name="btn_ExitGame" Content="退出游戏" Margin="5" Click="btn_ExitGame_Click" Focusable="False"/>
+            <TextBlock Text="游戏得分：" Margin="5" Focusable="False" FontSize="20"/>
+            <TextBlock x:Name="txb_Score" Text="0" Margin="5" Focusable="False" FontSize="20"/>
+            <TextBlock Text="操作步数：" Margin="5" Focusable="False" FontSize="20"/>
+            <TextBlock x:Name="txb_StepCount" Text="0" Margin="5" Focusable="False" FontSize="20"/>
+            <TextBox Name="txt_Record" Margin="5" Width="100" Height="460" VerticalScrollBarVisibility="Visible"
+                     IsReadOnly="True" TextWrapping="NoWrap" FontSize="13" Focusable="False"/>
+        </StackPanel>
+    </Grid>
+</Window>
